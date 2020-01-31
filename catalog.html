@@ -7,7 +7,6 @@
   <body>
   <header>
     <h1>Сайт магазина «Техномарт»</h1>
-
     <nav>
       <ul>
         <li><a href="index.html">Главная</a></li>
@@ -19,25 +18,21 @@
         <li><a href="#">Контакты</a></li>
       </ul>
     </nav>
-
     <div>
       <a href="index.html">техномарт</a>
     </div>
-
     <ul>
       <li><a href="#">Поиск</a></li>
       <li><a href="#">Закладки</a></li>
       <li><a href="#">Корзина</a></li>
       <li><a href="#">Оформить заказ</a></li>
     </ul>
-
     <section>
       <h2>Описание и контакты</h2>
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <p>+7 (812) 555-05-55</p>
         <p>г. Санкт-Петербург, ул.Б. Конюшенная, д.19/8</p>
     </section>
-
     <section>
       <h2>Вход и регистрация</h2>
         <ul>
@@ -49,46 +44,121 @@
   </header>
 
   <main>
-    <ul>
+    <ul class="breadcrumbs">
       <li><a href="#">каталог</a></li>
       <li><a href="#">инструмент</a></li>
       <li><a>перфораторы</a></li>
     </ul>
-
+    <section class="filters">
+      <h2>Фильтр товаров</h2>
+      <form action="#" method="post">
+        <p>сортировка:</p>
+        <div>
+          <select name="sort" id="sort"></select>
+            <option value="by_price">по цене</option>
+            <option value="by_type">по типу</option>
+            <option value="by_functional">по функционалу</option>
+          </select>
+          <button type="submit" name="sort_by" value="up">
+            <img src="icon-up-dir.png" alt="up">
+          </button>
+          <button type="submit" name="sort_by" value="down">
+            <img src="icon-down-dir.png" alt="down">
+          </button>
+        </div>
+        <p>фильтр товаров</p>
+        <form action="#" method="post">
+          <p>фильтр:</p>
+          <div>
+            <label for="price">цена:</label>
+            0<input type="range" id="price" name="price" min="0" max="30000" step="100">30000
+          </div>
+          <div>
+            <h3>производители:</h3>
+            <input type="checkbox" name="bosch" id="manufacturers">
+            <label for="manufacturers">bosch</label>
+            <input type="checkbox" name="интерскол" id="manufacturers">
+            <label for="manufacturers">интерскол</label>
+            <input type="checkbox" name="makita" id="manufacturers">
+            <label for="manufacturers">makita</label>
+            <input type="checkbox" name="dewalt" id="manufacturers">
+            <label for="manufacturers">dewalt</label>
+            <input type="checkbox" name="hitachi" id="manufacturers">
+            <label for="manufacturers">hitachi</label>
+          </div>
+          <div>
+            <h3>питание</h3>
+              <label>
+                <input type="radio" name="supply" value="battery" checked>аккумуляторные
+              </label>
+              <label>
+                <input type="radio" name="supply" value="mains">сетевые
+              </label>
+          </div>
+          <input type="submit" value="показать">
+      </form>
+    </section>
     <section>
       <h2>перфораторы</h2>
       <ul>
-        <li><a href="#">Перфоратор BOSCH BFG 3000</a></li>
-        <li><a href="#">Перфоратор BOSCH BFG 6000</a></li>
-        <li><a href="#">Перфоратор BOSCH BFG 2000</a></li>
-        <li><a href="#">Перфоратор BOSCH BFG 3000</a></li>
-        <li><a href="#">Перфоратор BOSCH BFG 6000</a></li>
-        <li><a href="#">Перфоратор BOSCH BFG 2000</a></li>
-        <li><a href="#">Перфоратор BOSCH BFG 3000</a></li>
-        <li><a href="#">Перфоратор BOSCH BFG 6000</a></li>
-        <li><a href="#">Перфоратор BOSCH BFG 2000</a></li>
-      </ul>
+        <li>
+          <h3>Перфоратор BOSCH BFG 3000</h3>
+          <img src="#" width="220" height="165" alt="Перфоратор BOSCH BFG 3000">
+          <p>22500 р.</p>
+          <p>15500 р.</p>
+        </li>
+        <li>
+          <h3>Перфоратор BOSCH BFG 6000</h3>
+          <img src="#" width="220" height="165" alt="Перфоратор BOSCH BFG 6000">
+          <p>30500 р.</p>
+          <p>25500 р.</p>
+        </li>
+        <li>
+          <h3>Перфоратор BOSCH BFG 2000</h3>
+          <img src="#" width="220" height="165" alt="Перфоратор BOSCH BFG 2000">
+          <p>12500 р.</p>
+        </li>
+        <li>
+          <h3>Перфоратор BOSCH BFG 3000</h3>
+          <img src="#" width="220" height="165" alt="Перфоратор BOSCH BFG 3000">
+          <p>22500 р.</p>
+          <p>15500 р.</p>
+        </li>
+        <li>
+          <h3>Перфоратор BOSCH BFG 6000</h3>
+          <img src="#" width="220" height="165" alt="Перфоратор BOSCH BFG 6000">
+          <p>30500 р.</p>
+          <p>25500 р.</p>
+        </li>
+        <li>
+          <h3>Перфоратор BOSCH BFG 2000</h3>
+          <img src="#" width="220" height="165" alt="Перфоратор BOSCH BFG 2000">
+          <p>12500 р.</p>
+        </li>
+        <li>
+          <h3>Перфоратор BOSCH BFG 3000</h3>
+          <img src="#" width="220" height="165" alt="Перфоратор BOSCH BFG 3000">
+          <p>22500 р.</p>
+          <p>15500 р.</p>
+        </li>
+        <li>
+          <h3>Перфоратор BOSCH BFG 6000</h3>
+          <img src="#" width="220" height="165" alt="Перфоратор BOSCH BFG 6000">
+          <p>30500 р.</p>
+          <p>25500 р.</p>
+        </li>
+        <li>
+          <h3>Перфоратор BOSCH BFG 2000</h3>
+          <img src="#" width="220" height="165" alt="Перфоратор BOSCH BFG 2000">
+          <p>12500 р.</p>
+        </li>
     </section>
-
-    <section>
-      <h2>фильтр товаров</h2>
-        <h3>производители:</h3>
-        <ul>
-          <li>bosch</li>
-          <li>интерскол</li>
-          <li>makita</li>
-          <li>dewalt</li>
-          <li>hitachi</li>
-        </ul>
-
-        <h3>питание:</h3>
-        <ul>
-          <li>аккумуляторные</li>
-          <li>сетевые</li>
-        </ul>
-
-        <a href="#">показать</a>
-    </section>
+    <ul>
+      <li><a>1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">следующая</a></li>
+    </ul>
   </main>
 
   <footer>
@@ -117,7 +187,7 @@
     </div>
     <div>
       <p>
-        © 2010-2017 Компания «Техномарт»<br>
+        © 2010-2020 Компания «Техномарт»<br>
         Все права защищены
       </p>
 
