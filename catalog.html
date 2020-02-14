@@ -19,7 +19,7 @@
       </ul>
     </nav>
     <div>
-      <a href="index.html">техномарт</a>
+      <a href="index.html"><img src="img/logo.png" alt="Логотип компании «Техномарт»"></a>
     </div>
     <ul>
       <li><a href="#">Поиск</a></li>
@@ -28,15 +28,16 @@
       <li><a href="#">Оформить заказ</a></li>
     </ul>
     <section>
-      <h2>Описание и контакты</h2>
+      <h2 class="visually-hidden">Описание и контакты</h2>
         <p>Интернет-магазин строительных материалов и инструментов для ремонта</p>
-        <p>+7 (812) 555-05-55</p>
+        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
         <p>г. Санкт-Петербург, ул.Б. Конюшенная, д.19/8</p>
     </section>
     <section>
-      <h2>Вход и регистрация</h2>
+      <h2 class="visually-hidden">Вход и регистрация</h2>
+        <p></p>
+        <a href="#">Выйти</a>
         <ul>
-          <li><a href="#">Профиль</a></li>
           <li><a href="#">Мои заказы</a></li>
           <li><a href="#">Личный кабинет</a></li>
         </ul>
@@ -49,55 +50,51 @@
       <li><a href="#">инструмент</a></li>
       <li><a>перфораторы</a></li>
     </ul>
-    <section class="filters">
-      <h2>Фильтр товаров</h2>
-      <form action="#" method="post">
-        <p>сортировка:</p>
-        <div>
-          <select name="sort" id="sort"></select>
-            <option value="by_price">по цене</option>
-            <option value="by_type">по типу</option>
-            <option value="by_functional">по функционалу</option>
-          </select>
+    <section class="sorting">
+
+      <form action="#" method="get">
+        <legend>Cортировка:</legend>
+        <fieldset>
+          <label for="by-price">по цене</label>
+          <input class="visually-hidden" type="radio" id="by-price" name="sorting" value="by-price" checked>
+          <label for="by-type">по типу</label>
+          <input class="visually-hidden" type="radio" id="by-type" name="sorting" value="by-type">
+          <label for="by-function">по функционалу</label>
+          <input class="visually-hidden" id="by-function" type="radio" name="sorting" value="by-function">
+        </fieldset>
           <button type="submit" name="sort_by" value="up">
             <img src="icon-up-dir.png" alt="up">
           </button>
           <button type="submit" name="sort_by" value="down">
             <img src="icon-down-dir.png" alt="down">
           </button>
-        </div>
-        <p>фильтр товаров</p>
-        <form action="#" method="post">
-          <p>фильтр:</p>
-          <div>
-            <label for="price">цена:</label>
-            0<input type="range" id="price" name="price" min="0" max="30000" step="100">30000
-          </div>
-          <div>
-            <h3>производители:</h3>
-            <input type="checkbox" name="bosch" id="manufacturers">
-            <label for="manufacturers">bosch</label>
-            <input type="checkbox" name="интерскол" id="manufacturers">
-            <label for="manufacturers">интерскол</label>
-            <input type="checkbox" name="makita" id="manufacturers">
-            <label for="manufacturers">makita</label>
-            <input type="checkbox" name="dewalt" id="manufacturers">
-            <label for="manufacturers">dewalt</label>
-            <input type="checkbox" name="hitachi" id="manufacturers">
-            <label for="manufacturers">hitachi</label>
-          </div>
-          <div>
-            <h3>питание</h3>
-              <label>
-                <input type="radio" name="supply" value="battery" checked>аккумуляторные
-              </label>
-              <label>
-                <input type="radio" name="supply" value="mains">сетевые
-              </label>
-          </div>
-          <input type="submit" value="показать">
       </form>
     </section>
+    <section class="filters">
+      <form action="#" method="get">
+        <h2>Фильтр:</h2>
+        <fieldset>
+          <label for="price">цена:</label>
+          <label>0</label>
+          <input type="range" id="price" name="price" min="0" max="30000" step="100">
+          <label>30000</label>
+        </fieldset>
+        <fieldset>
+          <legend>Производители:</legend>
+          <label><input type="checkbox" name="bosch" checked>bosch</label>
+          <label><input type="checkbox" name="интерскол">интерскол</label>
+          <label><input type="checkbox" name="makita" checked>makita</label>
+          <label><input type="checkbox" name="dewalt">dewalt</label>
+          <label><input type="checkbox" name="hitachi">hitachi</label>
+        </fieldset>
+        <fieldset>
+          <legend>Питание</legend>
+            <label><input type="radio" name="supply" value="battery" checked>аккумуляторные</label>
+            <label><input type="radio" name="supply" value="mains">сетевые</label>
+        </fieldset>
+        <input type="submit" value="показать">
+    </form>
+  </section>
     <section>
       <h2>перфораторы</h2>
       <ul>
